@@ -98,4 +98,3 @@ public class Board extends JPanel implements MouseListener {
     @Override public void mouseEntered(MouseEvent e) {}
     @Override public void mouseExited(MouseEvent e) {}
 }
-e
