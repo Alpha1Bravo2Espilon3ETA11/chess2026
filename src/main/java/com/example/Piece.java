@@ -5,8 +5,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 
 import javax.imageio.ImageIO;
 
@@ -38,6 +36,8 @@ public class Piece {
         return img;
     }
     
+    //precondition: g and currentSquare must be on-null valid objects.
+    //postcondition: the image stored in the img property of this object is drawn to the screen.
     public void draw(Graphics g, Square currentSquare) {
         int x = currentSquare.getX();
         int y = currentSquare.getY();
@@ -61,6 +61,7 @@ public class Piece {
     //please note that your piece must have some sort of logic. Just being able to move to every square on the board is not
     //going to score any points.
     public ArrayList<Square> getLegalMoves(Board b, Square start){
-    	return null;
+    	ArrayList  <Square> = new ArrayList<Square>;
+        return null;
     }
 }
