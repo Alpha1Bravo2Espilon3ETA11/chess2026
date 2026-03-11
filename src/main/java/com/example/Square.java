@@ -2,9 +2,9 @@ package com.example;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.util.ArrayList;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.JComponent;
 
 
 //Please read the following class carefully! It represents a single chess board square and is what you'll be using
@@ -95,9 +95,6 @@ public class Square extends JComponent {
         //this part highlights the square you're trying to move a piece from.
         if(!dispPiece){
             setBorder(BorderFactory.createLineBorder(Color.blue));
-        }
-        else{
-            setBorder(null);
         }
 
         //please note that these values are not set here, but rather we are using a layout manager to help us place these evenly
