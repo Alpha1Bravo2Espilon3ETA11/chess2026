@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
 //you will need to implement two functions in this file.
-public class Piece {
+public class SpecialKnight {
     private final boolean color;
     private BufferedImage img;
     
-    public Piece(boolean isWhite, String img_file) {
+    public SpecialKnight(boolean isWhite, String img_file) {
         this.color = isWhite;
          
         try {

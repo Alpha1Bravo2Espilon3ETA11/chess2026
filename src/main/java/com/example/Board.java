@@ -43,7 +43,7 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
     private boolean whiteTurn;
 
     // if the player is currently dragging a piece this variable contains it.
-    Piece currPiece;
+    SpecialKnight currPiece;
     //the square your piece came from when the user tries to move it.
     private Square fromMoveSquare;
     //the square your piece tries to go to when the user tries to move it.
@@ -101,28 +101,28 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
     // number of pieces on either side.
     // it's up to you how you wish to arrange your pieces.
     void initializePieces() {
-        board[0][0].put(new Piece(false, RESOURCES_BROOK_PNG));
-        board[0][1].put(new Piece(false, RESOURCES_BKNIGHT_PNG));
-        board[0][2].put(new Piece(false, RESOURCES_BBISHOP_PNG));
-        board[0][3].put(new Piece(false, RESOURCES_BQUEEN_PNG));
-        board[0][4].put(new Piece(false, RESOURCES_BKING_PNG));
-        board[0][5].put(new Piece(false, RESOURCES_BBISHOP_PNG));
-        board[0][6].put(new Piece(false, RESOURCES_BKNIGHT_PNG));
-        board[0][7].put(new Piece(false, RESOURCES_BROOK_PNG));
+        board[0][0].put(new SpecialKnight(false, RESOURCES_BROOK_PNG));
+        board[0][1].put(new SpecialKnight(false, RESOURCES_BKNIGHT_PNG));
+        board[0][2].put(new SpecialKnight(false, RESOURCES_BBISHOP_PNG));
+        board[0][3].put(new SpecialKnight(false, RESOURCES_BQUEEN_PNG));
+        board[0][4].put(new SpecialKnight(false, RESOURCES_BKING_PNG));
+        board[0][5].put(new SpecialKnight(false, RESOURCES_BBISHOP_PNG));
+        board[0][6].put(new SpecialKnight(false, RESOURCES_BKNIGHT_PNG));
+        board[0][7].put(new SpecialKnight(false, RESOURCES_BROOK_PNG));
         for (int i = 0; i < 8; i++) {
-            board[1][i].put(new Piece(false, RESOURCES_BPAWN_PNG));
+            board[1][i].put(new SpecialKnight(false, RESOURCES_BPAWN_PNG));
         }
         
-        board[7][0].put(new Piece(true, RESOURCES_WROOK_PNG));
-        board[7][1].put(new Piece(true, RESOURCES_WKNIGHT_PNG));
-        board[7][2].put(new Piece(true, RESOURCES_WBISHOP_PNG));
-        board[7][3].put(new Piece(true, RESOURCES_WQUEEN_PNG));
-        board[7][4].put(new Piece(true, RESOURCES_WKING_PNG));
-        board[7][5].put(new Piece(true, RESOURCES_WBISHOP_PNG));
-        board[7][6].put(new Piece(true, RESOURCES_WKNIGHT_PNG));
-        board[7][7].put(new Piece(true, RESOURCES_WROOK_PNG));
+        board[7][0].put(new SpecialKnight(true, RESOURCES_WROOK_PNG));
+        board[7][1].put(new SpecialKnight(true, RESOURCES_WKNIGHT_PNG));
+        board[7][2].put(new SpecialKnight(true, RESOURCES_WBISHOP_PNG));
+        board[7][3].put(new SpecialKnight(true, RESOURCES_WQUEEN_PNG));
+        board[7][4].put(new SpecialKnight(true, RESOURCES_WKING_PNG));
+        board[7][5].put(new SpecialKnight(true, RESOURCES_WBISHOP_PNG));
+        board[7][6].put(new SpecialKnight(true, RESOURCES_WKNIGHT_PNG));
+        board[7][7].put(new SpecialKnight(true, RESOURCES_WROOK_PNG));
         for (int i = 0; i < 8; i++) {
-            board[6][i].put(new Piece(true, RESOURCES_WPAWN_PNG)); 
+            board[6][i].put(new SpecialKnight(true, RESOURCES_WPAWN_PNG)); 
         }
     }
 
@@ -134,11 +134,11 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
         return whiteTurn;
     }
 
-    public void setCurrPiece(Piece p) {
+    public void setCurrPiece(SpecialKnight p) {
         this.currPiece = p;
     }
 
-    public Piece getCurrPiece() {
+    public SpecialKnight getCurrPiece() {
         return this.currPiece;
     }
 
