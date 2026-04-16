@@ -1,3 +1,6 @@
+// Diego Aldworth
+//PD: 7
+//Description: Will make a specialized knight that can move 1 more tile in the l shape, similar to a actual knight.
 package com.example;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -115,7 +118,7 @@ public class SpecialKnight {
 
     public ArrayList<Square> getLegalMoves(Board b, Square start){
         ArrayList<Square> moves = new ArrayList<Square>();
-        if ((start.getRow() - 2 >= 0) && (start.getCol() + 1 < 8)) {
+        if ((start.getRow() - 3 >= 0) && (start.getCol() + 1 < 8)) {
             Square upRight = b.getSquareArray()[start.getRow() - 2][start.getCol() + 1];
             if (upRight.isOccupied() == false) {
                 moves.add(upRight);
@@ -125,7 +128,7 @@ public class SpecialKnight {
             }
         }
 
-        if ((start.getRow() - 2 >= 0) && (start.getCol() - 1 >= 0)) {
+        if ((start.getRow() - 3 >= 0) && (start.getCol() - 1 >= 0)) {
             Square upLeft = b.getSquareArray()[start.getRow() - 2][start.getCol() - 1];
             if (upLeft.isOccupied() == false) {
                 moves.add(upLeft);
@@ -135,7 +138,7 @@ public class SpecialKnight {
             }
         }
 
-        if ((start.getRow() + 2 < 8) && (start.getCol() + 1 < 8)) {
+        if ((start.getRow() + 3 < 8) && (start.getCol() + 1 < 8)) {
             Square downRight = b.getSquareArray()[start.getRow() + 2][start.getCol() + 1];
             if (downRight.isOccupied() == false) {
                 moves.add(downRight);
@@ -145,7 +148,7 @@ public class SpecialKnight {
             }
         }
 
-        if ((start.getRow() + 2 < 8) && (start.getCol() - 1 >= 0)) {
+        if ((start.getRow() + 3 < 8) && (start.getCol() - 1 >= 0)) {
             Square downLeft = b.getSquareArray()[start.getRow() + 2][start.getCol() - 1];
             if (downLeft.isOccupied() == false) {
                 moves.add(downLeft);
