@@ -18,13 +18,7 @@ public class SpecialKnight extends Piece {
     public SpecialKnight(boolean isWhite, String img_file) {
         super(isWhite, img_file);
         }
-    // TO BE IMPLEMENTED!
-    //return a list of every square that is "controlled" by this piece. A square is controlled
-    //if the piece capture into it legally.
-
-    // Pre-condition: board must not be null, start must be a valid square on board, board is a valid 8x8 array
-    // Pos-condition: Returns all squares reachable by knight movement pattern regardless of occupancy.
-
+    
     public ArrayList<Square> getControlledSquares(Square[][] board, Square start) {
 
         ArrayList<Square> controlled = new ArrayList<Square>();
@@ -39,12 +33,12 @@ public class SpecialKnight extends Piece {
             controlled.add(upLeft);
         }
 
-        if ((start.getRow() + 2 < 8) && (start.getCol() + 1 < 8)) {
+        if ((start.getRow() + 3 < 8) && (start.getCol() + 1 < 8)) {
             Square downRight = board[start.getRow() + 2][start.getCol() + 1];
             controlled.add(downRight);
         }
 
-        if ((start.getRow() + 2 < 8) && (start.getCol() - 1 >= 0)) {
+        if ((start.getRow() + 3 < 8) && (start.getCol() - 1 >= 0)) {
             Square downLeft = board[start.getRow() + 2][start.getCol() - 1];
             controlled.add(downLeft);
         }
