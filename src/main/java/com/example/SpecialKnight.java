@@ -12,43 +12,12 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
 //you will need to implement two functions in this file.
-public class SpecialKnight {
-    private final boolean color;
-    private BufferedImage img;
-    
-    public SpecialKnight(boolean isWhite, String img_file) {
-        this.color = isWhite;
-         
-        try {
-            if (this.img == null) {
-                this.img = ImageIO.read(new File(System.getProperty("user.dir")+img_file));
-            }
-          } catch (IOException e) {
-            System.out.println("File not found: " + e.getMessage());
-          }
-    }
-    
-    
+public class SpecialKnight extends Piece {
 
     
-    public boolean getColor() {
-        return color;
-    }
-    
-    public Image getImage() {
-        return img;
-    }
-    
-    //precondition: g and currentSquare must be on-null valid objects.
-    //postcondition: the image stored in the img property of this object is drawn to the screen.
-    public void draw(Graphics g, Square currentSquare) {
-        int x = currentSquare.getX();
-        int y = currentSquare.getY();
-        
-        g.drawImage(this.img, x, y, null);
-    }
-    
-    
+    public SpecialKnight(boolean isWhite, String img_file) {
+        super(isWhite, img_file);
+        }
     // TO BE IMPLEMENTED!
     //return a list of every square that is "controlled" by this piece. A square is controlled
     //if the piece capture into it legally.
