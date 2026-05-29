@@ -20,8 +20,10 @@ public class King extends Piece {
 		super(isWhite, img_file);
 	}
 
-// Pre-condition: b is a non-null board that contains some squares. The currentSquare is non-null and present in the board.
-// Post-condition: returns all legally accessable squares by this piece. In an event that no squares are accessable returns an empty list.
+// Pre-condition: b is a non-null board that contains some squares. The
+// currentSquare is non-null and present in the board.
+// Post-condition: Returns all legally accessable squares by this piece. In
+// event that no squares are accessable returns an empty list.
 	@Override
 	public ArrayList<Square> getLegalMoves(Board b, Square currentSquare) {
 		Square [][] board = b.getSquareArray();
